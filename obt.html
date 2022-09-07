@@ -35,6 +35,26 @@
 	<h3><a href=https://guild.xyz/onebraintogether>
 		<font color="magenta"><b>MINTING BEGINS SEPTEMBER 12TH</b></font>
 		</a></h3>
+	
+	<div id="bueno-embed-container"></div>
+
+<script type="module">
+  import { BuenoWidget } from "https://nft.bueno.art/widget/latest.js";
+
+  const widget = new BuenoWidget(
+    document.getElementById("bueno-embed-container")
+  );
+
+  widget.init({
+    contractAddress: "0xa04Cd49E472B34F1C35551064Da12746931854F4",
+    chainId: 4,
+    button: { background: "#5062FE" },
+    showPrice: true,
+    showSupply: true,
+    autoConnect: true,
+    
+  });
+</script>
   
 
 	<p><b>Obt.</b> is a collection of 1,111 free generative ERC-721 tokens by One Brain Together. To mint, you will need an <a href="https://metamask.io/"><font color="blue">Ethereum wallet</font></a>.</p>
