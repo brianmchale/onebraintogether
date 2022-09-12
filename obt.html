@@ -35,7 +35,27 @@
 	<h3><a href=https://guild.xyz/onebraintogether>
 		<font color="magenta"><b>MINTING BEGINS SEPTEMBER 12TH</b></font>
 		</a></h3>
-	
+
+	<div id="bueno-embed-container"></div>
+
+<script type="module">
+  import { BuenoWidget } from "https://nft.bueno.art/widget/latest.js";
+
+  const widget = new BuenoWidget(
+    document.getElementById("bueno-embed-container")
+  );
+
+  widget.init({
+    contractAddress: "0xa04Cd49E472B34F1C35551064Da12746931854F4",
+    chainId: 5,
+    button: { background: "#3400ff" },
+    showPrice: false,
+    showSupply: true,
+    autoConnect: false,
+    allowlistId: "fxyWo_bhRWtK5kHtSTWmx",
+  });
+</script>
+  
 
 	<p><b>Obt.</b> is a collection of 1,111 free generative ERC-721 tokens by One Brain Together. To mint, you will need an <a href="https://metamask.io/"><font color="blue">Ethereum wallet</font></a>.</p>
 <p><b><u>Inspired by the early internet, redesigned for the future internet.</u></b><br>Algorithmically generated from more than 150 traits celebrating DIY communities both IRL and online, Obt. is designed to be an art- and fashion-focused avatar project combining contemporary and nostalgic influences. Each token is unique and has a varying rarity level based on a combination of 4-8 attributes. Certain traits will unlock token-gated utility as we build the One Brain Together ecosystem.</p>
