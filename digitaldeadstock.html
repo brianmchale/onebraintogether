@@ -1,37 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="digitaldeadstockcss.css">
 	<title>One Brain Together - Digital Deadstock</title>
+
+<style>
+	/* Slideshow container */
+	.slideshow-container {
+		max-width: 500px; /* Adjust the width as needed */
+		position: relative;
+		margin: 0 auto;
+		margin-left: 0; /* Align the slideshow to the left */
+		text-align: left;
+		display: inline-block;
+		margin-bottom: 0px; /* Adjust the margin as needed */
+	}
+
+	/* Fading animation */
+	.fade {
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@keyframes fade {
+		from { opacity: .4; } 
+		to { opacity: 1; }
+	}
+
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+		.text { font-size: 11px; }
+	}
+
+	/* Square image */
+	.mySlides img {
+		width: 100%;
+		height: auto;
+		padding: 0;
+		object-fit: cover;
+		aspect-ratio: 1/1; /* Forces square aspect ratio */
+	}
+</style>
+
+
+
+
 </head>
+
+
 <body>
 	<h1><a href="https://onebraintogether.com"><font color="#3400ff">One Brain Together</font></a></h1>
+
 	<h2><font color="#ff3400">Digital Deadstock</font></h2>
-	<a href="https://www.depop.com/onebraintogether/" target="_blank"><button style="background-color: red; color: white; padding: 10px;">AVAILABLE ON DEPOP NOW NOW NOW HOLY SHIT</button></a>
-	<p>Welcome to Digital Deadstock, the sustainable fashion brand that's creating a new experience for secondhand clothing. We believe in reducing waste and providing unique utility for each piece. Our line features upcycled thrifted clothes that have been given a new life in both the physical and virtual worlds.</p>
+
+	<a href="https://www.depop.com/onebraintogether/" target="_blank"><button style="background-color: red; color: white; padding: 10px;">AVAILABLE ON DEPOP NOW NOW NOW HOLY SHIT</button></a><br><br>
+	<a href="https://www.onebraintogether.com/digitaldeadstock/register" target="_blank"><button style="background-color: blue; color: white; padding: 10px;">PRODUCT REGISTRATION FORM INCASE THE QR TAG ISN'T WORKING</button></a>
+
+	<p>Digital Deadstock is a sustainable apparel initiative by One Brain Together, bringing new life to secondhand clothing through blockchain-enabled utility, online community benefits, and exclusive art.</p>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://cdn.discordapp.com/attachments/934178224886403102/1107711381668642956/obtla_1.png" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://cdn.discordapp.com/attachments/934178224886403102/1107711381991591947/obtla_2.png" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://cdn.discordapp.com/attachments/934178224886403102/1107711382335541318/obtla_3.png" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://cdn.discordapp.com/attachments/934178224886403102/1107711382683664495/obtla_4.png" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://cdn.discordapp.com/attachments/934178224886403102/1107711383165997189/obtla_5.png" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://cdn.discordapp.com/attachments/934178224886403102/1107711383455420446/obtla_6.png" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+}
+
+setInterval(showSlides, 2000); // Change image every 2 seconds
+
+</script>
+
+	
+	<h3>How to register your Digital Deadstock product</h3>
+	<ol>
+	<li>Scan the QR code printed on the inside of your piece and fill out the registration form.</li>
+	<li>You will receive an airdrop in your Ethereum wallet that will allow you to mint our digital lookbook zine and all future art drops for a discount.</li>
+	<li><b>Obt. holders</b> -- You will soon be able to swap out your avatar's original shirt or pants for a digital version of your IRL garment in The Echo Chamber (beta), our interactive online world and community event space. More info TBA.</li>
+	</ol>
+
+
 	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
 	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<h3>Sustainability</h3>
-	<p>At Digital Deadstock, we believe in the importance of reducing waste and promoting sustainable practices in the fashion industry. By upcycling thrifted clothes, we're able to give new life to previously discarded items and help minimize the environmental impact of clothing production.</p>
+
+
+	<h3>What is Digital Deadstock?</h3>
+	<p>One Brain Together aims to connect the deepest of the physical and digital worlds. We believe in the necessity of reducing textile waste, while also embracing bleeding-edge technologies to bring new, interactive experiences to clothing that otherwise would've ended up in a landfill. By "digitally upcycling" thrifted clothes, we're able to give a new life and dimension to previously discarded items and help promote sustainable practices in what we wear and create, alleviating the idea that sustainability comes at the cost of innovation.</p>
 	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
 	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<h3>Creativity</h3>
-	<p>We're dedicated to offering an immersive and unique fashion experience for our community. We work with emerging artists to offer one-of-a-kind clothing designs, and host screenprinting popups to provide a creative and collaborative space for our customers. This approach allows us to offer exclusive items and experiences that you won't find anywhere else.</p>
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<h3>Exclusive Access</h3>
-	<p>Our line grants access to a community of like-minded individuals who share a passion for sustainable fashion and digital experiences. As a member of our community, you'll have access to an exclusive online space where you can connect with others and explore new digital spaces together.</p>
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<h3>Personalized Experience</h3>
-	<p>We're all about providing a personalized virtual fashion experience that allows you to truly express yourself. Our line lets you swap out your avatar's clothing for the digital version of the clothes you purchased in real life, giving you complete control over your virtual style.</p>
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<h3>Utility</h3>
-	<p>Our line is more than just a fashion statement - it's a way to unlock digital utility within our online community spaces and games. Each garment has a unique feature that provides utility, allowing you to get the most out of your purchase and engage in exciting new experiences within our community.</p>
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
+
+	<h3>More than a garment / Low Waste, High Tech</h3>
+	<p>When you purchase a Digital Deadstock product, the garment itself is only the beginning. Scan the QR code on the inside tag area and gain access to an ever-growing offering of immersive and unique online and IRL experiences for our community.</p> 
+	<ul>
+		<li><b>IRL & URL Events:</b> After hosting two successful Digital Deadstock popups in Los Angeles and New York City, we're ready to throw many more events in the near future - all registered wallets get free access to all of our events, both IRL and online, as well as additional perks, such as free screenprints on your personal garments.</li>
+		<li><b>Digital Art Drops:</b> Registered wallets will be automatically placed on a presale list for all future art drops. We work with top emerging artists to offer one-of-a-kind digital art drops, that can be ordered as clothing upon collecting. 
+Our line grants access to a community of like-minded individuals who share a passion for sustainable fashion and digital experiences. As a member of our community, you'll have access to an exclusive online space where you can connect with others and explore new digital spaces together.</li>
+		<li><b>The Echo Chamber:</b> We're all about providing a personalized virtual fashion experience that allows you to truly express yourself. Our line lets you swap out your avatar's clothing for the digital version of the clothes you purchased in real life, giving you complete control over your virtual style.</li>
+	</ul>
+
+		<p>Our line is more than just a fashion statement - it's a way to unlock digital utility within our online community spaces and games. Each garment has a unique feature that provides utility, allowing you to get the most out of your purchase and engage in exciting new experiences within our community.</p>
+
 	<p>Join us today and experience the new standard in sustainable fashion.</p>
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
+
+
 </body>
+<hr style="border: 1px solid rgb(2, 2, 2);">
+<footer>
+© 2023 One Brain Together
 </html>
