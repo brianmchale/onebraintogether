@@ -43,15 +43,16 @@
 		object-fit: cover;
 		aspect-ratio: 1/1; /* Forces square aspect ratio */
 	}
-	
+
 	.image-container {
- 		 display: flex;
+	  display: flex;
+	  gap: 10px; /* Add a 10px gap between the images */
 	}
 
 	.image-container img {
- 		 width: 50%; /* Each image takes 50% width */
-  		object-fit: cover; /* Preserve aspect ratio */
-  		height: auto; /* Adjust height automatically based on aspect ratio */
+	  flex: 1; /* Distribute available space evenly */
+	  max-width: 100%; /* Limit the maximum width of the images */
+	  height: auto; /* Adjust height automatically based on aspect ratio */
 	}
 </style>
 
