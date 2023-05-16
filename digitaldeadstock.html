@@ -43,6 +43,16 @@
 		object-fit: cover;
 		aspect-ratio: 1/1; /* Forces square aspect ratio */
 	}
+	
+	.image-container {
+ 		 display: flex;
+	}
+
+	.image-container img {
+ 		 width: 50%; /* Each image takes 50% width */
+  		object-fit: cover; /* Preserve aspect ratio */
+  		height: auto; /* Adjust height automatically based on aspect ratio */
+	}
 </style>
 
 
@@ -119,15 +129,19 @@ setInterval(showSlides, 2000); // Change image every 2 seconds
 	<li><b>Obt. holders</b> -- You will soon be able to swap out your avatar's original shirt or pants for a digital version of your IRL garment in The Echo Chamber (beta), our interactive online world and community event space. More info TBA.</li>
 	</ol>
 
-
-	<img src="https://cdn.discordapp.com/attachments/934178224886403102/1107816224773124126/IMG_3035.PNG" alt="placeholder image">
-	<img src="https://cdn.discordapp.com/attachments/934178224886403102/1107816224429195385/Screen_Shot_2023-05-13_at_10.14.07_PM.png" alt="placeholder image">
-
+	<div class="image-container">
+		<img src="https://cdn.discordapp.com/attachments/934178224886403102/1107816224773124126/IMG_3035.PNG" alt="placeholder image">
+		<img src="https://cdn.discordapp.com/attachments/934178224886403102/1107816224429195385/Screen_Shot_2023-05-13_at_10.14.07_PM.png" alt="placeholder image">
+	</div>
+	
 
 	<h3>What is Digital Deadstock?</h3>
 	<p>One Brain Together aims to connect the deepest of the physical and digital worlds. We believe in the necessity of reducing textile waste, while also embracing bleeding-edge technologies to bring new, interactive experiences to clothing that otherwise would've ended up in a landfill. By "digitally upcycling" thrifted clothes, we're able to give a new life and dimension to previously discarded items and help promote sustainable practices in what we wear and create, alleviating the idea that sustainability comes at the cost of innovation.</p>
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
-	<img src="https://via.placeholder.com/350x150" alt="placeholder image">
+
+	<div class="image-container">
+		<img src="https://cdn.discordapp.com/attachments/934178224886403102/1107816224773124126/IMG_3035.PNG" alt="placeholder image">
+		<img src="https://cdn.discordapp.com/attachments/934178224886403102/1107816224429195385/Screen_Shot_2023-05-13_at_10.14.07_PM.png" alt="placeholder image">
+	</div>
 
 	<h3>More than a garment / Low Waste, High Tech</h3>
 	<p>When you purchase a Digital Deadstock product, the garment itself is only the beginning. Scan the QR code on the inside tag area and gain access to an ever-growing offering of immersive and unique online and IRL experiences for our community.</p> 
