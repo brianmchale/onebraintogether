@@ -9,7 +9,40 @@
         table, th, td {
             border: 1px solid black;
             border-radius: 10px;
-        }   
+        }
+        .product {
+            position: relative;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            width: 259px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+            border-radius: 10px;
+            font-family: IBM Plex Mono, SQ Market, Helvetica, Arial, sans-serif;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .product:hover .arrow {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -24,6 +57,8 @@
             <td>
                 <div class="product" data-images='["distro/iowb tee front.png", "distro/iowb tee back.png"]'>
                     <img src="distro/iowb tee front.png" alt="It's Over/We're Back Tee" class="product-image" style="width: 100%;">
+                    <span class="arrow left" onclick="prevImage(this)">&#10094;</span>
+                    <span class="arrow right" onclick="nextImage(this)">&#10095;</span>
                     <div style="padding: 20px;">
                         <p style="font-size: 18px; line-height: 20px;">It's Over/We're Back Tee</p>
                         <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$34.99</p>
@@ -44,6 +79,8 @@
             <td>
                 <div class="product" data-images='["distro/iowb pants front.png", "distro/iowb pants back.png"]'>
                     <img src="distro/iowb pants front.png" alt="It's Over/We're Back Pants" class="product-image" style="width: 100%;">
+                    <span class="arrow left" onclick="prevImage(this)">&#10094;</span>
+                    <span class="arrow right" onclick="nextImage(this)">&#10095;</span>
                     <div style="padding: 20px;">
                         <p style="font-size: 18px; line-height: 20px;">It's Over/We're Back Pants</p>
                         <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$44.99</p>
@@ -64,6 +101,8 @@
             <td>
                 <div class="product" data-images='["distro/iowb shorts front.png", "distro/iowb shorts back.png"]'>
                     <img src="distro/iowb shorts front.png" alt="It's Over/We're Back Shorts" class="product-image" style="width: 100%;">
+                    <span class="arrow left" onclick="prevImage(this)">&#10094;</span>
+                    <span class="arrow right" onclick="nextImage(this)">&#10095;</span>
                     <div style="padding: 20px;">
                         <p style="font-size: 18px; line-height: 20px;">It's Over/We're Back Shorts</p>
                         <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$24.99</p>
@@ -88,16 +127,25 @@
     <footer>© 2024 One Brain Together</footer>
 
     <script>
-        document.querySelectorAll('.product-image').forEach(image => {
-            image.addEventListener('click', function() {
-                const productDiv = this.closest('.product');
-                const images = JSON.parse(productDiv.getAttribute('data-images'));
-                const currentImage = this.getAttribute('src');
-                const currentIndex = images.indexOf(currentImage);
-                const nextIndex = (currentIndex + 1) % images.length;
-                this.setAttribute('src', images[nextIndex]);
-            });
-        });
+        function nextImage(element) {
+            const productDiv = element.closest('.product');
+            const images = JSON.parse(productDiv.getAttribute('data-images'));
+            const imgElement = productDiv.querySelector('.product-image');
+            const currentImage = imgElement.getAttribute('src');
+            const currentIndex = images.indexOf(currentImage);
+            const nextIndex = (currentIndex + 1) % images.length;
+            imgElement.setAttribute('src', images[nextIndex]);
+        }
+
+        function prevImage(element) {
+            const productDiv = element.closest('.product');
+            const images = JSON.parse(productDiv.getAttribute('data-images'));
+            const imgElement = productDiv.querySelector('.product-image');
+            const currentImage = imgElement.getAttribute('src');
+            const currentIndex = images.indexOf(currentImage);
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            imgElement.setAttribute('src', images[prevIndex]);
+        }
     </script>
 </body>
 </html>
