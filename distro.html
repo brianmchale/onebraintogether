@@ -4,7 +4,11 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>One Brain Together - Distro Webstore</title>
     <link rel="icon" type="image/x-icon" href="IWW.png">
-
+    <script>
+        if (window.location.pathname !== window.location.pathname.toLowerCase()) {
+            window.location.href = window.location.origin + window.location.pathname.toLowerCase();
+        }
+    </script>
     <style>
         body {
             font-family: IBM Plex Mono, SQ Market, Helvetica, Arial, sans-serif;
